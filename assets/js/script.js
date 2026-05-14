@@ -63,18 +63,18 @@ console.log(distanzaDa19(25)); // 25 - 19 = 6, moltiplicato per 3: 18.
    true se n è tra 20 e 100 (compresi) oppure è esattamente 400.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+/* SCRIVI QUI LA TUA RISPOSTA */ 
 
 const dentroIntervallo = function(n) {
-    if (n >= 20 && n <= 100) {
-        return true;
-    } else if ( n === 400) {
+    if ((n >= 20 && n <= 100) || n === 400) {
         return true;
     }
     return false;
 };
 
 console.log(dentroIntervallo(230)); // false
+console.log(dentroIntervallo(400));  // true
+console.log(dentroIntervallo(55)); // true
 
 
 /* ESERCIZIO 5 — epify
@@ -85,6 +85,14 @@ console.log(dentroIntervallo(230)); // false
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const epify = function(testo) {
+    if (testo.startsWith('EPICODE')) {
+        return testo;
+    }
+    return 'EPICODE ' + testo;
+};
+
+console.log(epify('Account'));
 
 /* ESERCIZIO 6 — divisibilePer3o7
    Funzione divisibilePer3o7(n): true se n positivo E divisibile per 3 O per 7.
