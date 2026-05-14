@@ -65,6 +65,17 @@ console.log(distanzaDa19(25)); // 25 - 19 = 6, moltiplicato per 3: 18.
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const dentroIntervallo = function(n) {
+    if (n >= 20 && n <= 100) {
+        return true;
+    } else if ( n === 400) {
+        return true;
+    }
+    return false;
+};
+
+console.log(dentroIntervallo(230)); // false
+
 
 /* ESERCIZIO 5 — epify
    Funzione epify(testo): aggiunge "EPICODE " davanti.
