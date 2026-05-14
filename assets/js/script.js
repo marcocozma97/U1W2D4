@@ -100,6 +100,17 @@ console.log(epify('Account'));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const divisibilePer3o7 = function(n) {
+    if ( n > 0 && n % 3 === 0 || n % 7 === 0) {
+        return true;
+    }
+    return false;
+};
+
+console.log(divisibilePer3o7(6)); // true - perchè è sia divisibile per 3, che positivo
+console.log(divisibilePer3o7(14)); // true - perchè è sia divisibile per 7, che positivo
+console.log(divisibilePer3o7(-3)); // false - perchè è divisibile per 3, ma è negativo
+console.log(divisibilePer3o7(8)); // false - perchè è positivo, ma non è divisibile nè per 3, nè per 7
 
 /* ESERCIZIO 7 — invertiStringa
    Funzione invertiStringa(testo): ritorna la stringa invertita.
