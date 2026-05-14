@@ -180,6 +180,15 @@ console.log(togliPrimoEUltimo('EPICODE')); // usa console log per stampare una p
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const dammiCasuali = function(n) {
+   numeriCasuali = []; // creo un array vuoto dove mettere i numeri casuali che escono.
+   for (i=0; i < dammiCasuali.length; i++)
+    numeriCasuali.push(Math.floor(Math.random() * 11)); // Math.random() mi dà un numero decimale tra 0 e 1, moltiplicato per 11 mi dà un numero decimale tra 0 e 10
+    return numeriCasuali; // return un array di n numeri interi casuali da 0 a 10
+    // usa Math.random e Math.floor
+};
+
+console.log(dammiCasuali());
 
 /* --EXTRA-- ESERCIZIO 11 — etaInGiorni
    Funzione etaInGiorni(annoNascita, meseNascita, giornoNascita).
