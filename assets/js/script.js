@@ -120,6 +120,17 @@ console.log(divisibilePer3o7(8)); // false - perchè è positivo, ma non è divi
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const invertiStringa = function(testo) {
+    let caratteri = testo.split(""); 
+    let arrayInvertito = [];
+    for (let i = caratteri.length - 1; i >= 0; i--) {
+        arrayInvertito.push(caratteri[i]);
+    }
+    return arrayInvertito.join("");
+};
+
+console.log(invertiStringa('MARCO')); // "OCRAM"
+
 
 /* ESERCIZIO 8 — inizialiMaiuscole
    Funzione inizialiMaiuscole(frase): metti in maiuscolo la prima lettera di ogni parola.
