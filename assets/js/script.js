@@ -101,7 +101,7 @@ console.log(epify('Account'));
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const divisibilePer3o7 = function(n) {
-    if ( n > 0 && n % 3 === 0 || n % 7 === 0) {
+    if ( n > 0 && (n % 3 === 0 || n % 7 === 0)) {
         return true;
     }
     return false;
@@ -121,8 +121,8 @@ console.log(divisibilePer3o7(8)); // false - perchè è positivo, ma non è divi
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const invertiStringa = function(testo) {
-    let caratteri = testo.split(""); 
-    let arrayInvertito = [];
+    const caratteri = testo.split(""); 
+    const arrayInvertito = [];
     for (let i = caratteri.length - 1; i >= 0; i--) {
         arrayInvertito.push(caratteri[i]);
     }
@@ -147,12 +147,12 @@ console.log(invertiStringa('MARCO')); // "OCRAM"
 // infine, unisco tutte le parole con join(" ")
 
 const inizialiMaiuscole = function(frase) {
-    let parole = frase.split(" "); // "ciao", "mondo"
-    let paroleMaiuscole = []; // array vuoto dove metterò le parole con la prima lettera maiuscola
+    const parole = frase.split(" "); // "ciao", "mondo"
+    const paroleMaiuscole = []; // array vuoto dove metterò le parole con la prima lettera maiuscola
     for (let i = 0; i < parole.length; i++) { // vado a ciclare ogni parola
-        let parola = parole[i]; // prendo la parola del ciclo
-        let primaLetteraMaiuscola = parola.slice(0, 1).toUpperCase(); // prendo la prima lettera e la metto in maiuscolo, ad entrambe le parole
-        let restoParola = parola.slice(1); // prendo il resto della parola, di entrambe le parole
+        const parola = parole[i]; // prendo la parola del ciclo
+        const primaLetteraMaiuscola = parola.slice(0, 1).toUpperCase(); // prendo la prima lettera e la metto in maiuscolo, ad entrambe le parole
+        const restoParola = parola.slice(1); // prendo il resto della parola, di entrambe le parole
         paroleMaiuscole.push(primaLetteraMaiuscola + restoParola); // unisco la prima lettera maiuscola con il resto della parola e la aggiungo all'array paroleMaiuscole
     }
     return paroleMaiuscole.join(" "); // unisco tutte le parole con la prima lettera maiuscola e le separo con uno spazio
@@ -181,14 +181,15 @@ console.log(togliPrimoEUltimo('EPICODE')); // usa console log per stampare una p
 /* SCRIVI QUI LA TUA RISPOSTA */
 
 const dammiCasuali = function(n) {
-   numeriCasuali = []; // creo un array vuoto dove mettere i numeri casuali che escono.
-   for (i=0; i < dammiCasuali.length; i++)
-    numeriCasuali.push(Math.floor(Math.random() * 11)); // Math.random() mi dà un numero decimale tra 0 e 1, moltiplicato per 11 mi dà un numero decimale tra 0 e 10
-    return numeriCasuali; // return un array di n numeri interi casuali da 0 a 10
-    // usa Math.random e Math.floor
+   const numeriCasuali = []; // creo un array vuoto dove mettere i numeri casuali che escono.
+   for (let i = 0; i < n; i++) {
+       numeriCasuali.push(Math.floor(Math.random() * 11)); // Math.random() mi dà un numero decimale tra 0 e 1, moltiplicato per 11 mi dà un numero decimale tra 0 e 10
+   }
+   return numeriCasuali; // return un array di n numeri interi casuali da 0 a 10
+   // usa Math.random e Math.floor
 };
 
-console.log(dammiCasuali());
+console.log(dammiCasuali(8)); // mi darà 8 numeri interi casuali tra 0 e 10 (inclusi)
 
 /* --EXTRA-- ESERCIZIO 11 — etaInGiorni
    Funzione etaInGiorni(annoNascita, meseNascita, giornoNascita).
