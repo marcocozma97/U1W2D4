@@ -167,6 +167,11 @@ console.log(inizialiMaiuscole("ciao mondo")); // "Ciao Mondo"
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const togliPrimoEUltimo = function(testo) {
+    return testo.slice(1, 6);  // usa slice per togliere primo e ultimo carattere
+};
+console.log(togliPrimoEUltimo('EPICODE')); // usa console log per stampare una prova con la scritta EPICODE
+
 
 /* ESERCIZIO 10 — dammiCasuali
    Funzione dammiCasuali(n): ritorna un array di n numeri interi casuali tra 0 e 10 (inclusi).
