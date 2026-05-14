@@ -140,6 +140,25 @@ console.log(invertiStringa('MARCO')); // "OCRAM"
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+// devo dividere la frase in parole, quindi split(" ")
+// poi devo ciclare ogni parola, quindi for
+// per ogni parola, prendo la prima lettera con slice(0,1) e la metto in maiuscolo con toUpperCase()
+// poi prendo il resto della parola con slice(1) e lo aggiungo alla prima lettera maiuscola
+// infine, unisco tutte le parole con join(" ")
+
+const inizialiMaiuscole = function(frase) {
+    let parole = frase.split(" "); // "ciao", "mondo"
+    let paroleMaiuscole = []; // array vuoto dove metterò le parole con la prima lettera maiuscola
+    for (let i = 0; i < parole.length; i++) { // vado a ciclare ogni parola
+        let parola = parole[i]; // prendo la parola del ciclo
+        let primaLetteraMaiuscola = parola.slice(0, 1).toUpperCase(); // prendo la prima lettera e la metto in maiuscolo, ad entrambe le parole
+        let restoParola = parola.slice(1); // prendo il resto della parola, di entrambe le parole
+        paroleMaiuscole.push(primaLetteraMaiuscola + restoParola); // unisco la prima lettera maiuscola con il resto della parola e la aggiungo all'array paroleMaiuscole
+    }
+    return paroleMaiuscole.join(" "); // unisco tutte le parole con la prima lettera maiuscola e le separo con uno spazio
+};
+
+console.log(inizialiMaiuscole("ciao mondo")); // "Ciao Mondo"
 
 /* ESERCIZIO 9 — togliPrimoEUltimo
    Funzione togliPrimoEUltimo(testo): rimuovi primo e ultimo carattere.
