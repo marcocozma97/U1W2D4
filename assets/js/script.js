@@ -47,6 +47,16 @@ console.log(sommaPazza(4, 4));
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 
+const distanzaDa19 = function(n) {
+    if (n > 19) {
+        return Math.abs(n - 19) * 3;
+    }
+    return Math.abs(n - 19);
+};
+
+console.log(distanzaDa19(5));   // Math.abs mi ridà il valore assoluto. Quindi 5 - 19 = 14.
+
+console.log(distanzaDa19(25)); // 25 - 19 = 6, moltiplicato per 3: 18.
 
 /* ESERCIZIO 4 — dentroIntervallo
    Funzione dentroIntervallo(n):
